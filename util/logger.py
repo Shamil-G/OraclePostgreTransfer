@@ -8,13 +8,13 @@ def init_service_logger():
     logging.getLogger('TRANSFER-LOGGER').addHandler(logging.StreamHandler())
 
     logger.setLevel(logging.INFO)
-    fh = logging.FileHandler(f"logs/transfer.log", encoding="UTF-8")
+    fh = logging.FileHandler(f"/home/doc/OraclePostgreTransfer/logs/transfer.log", encoding="UTF-8")
     # fh = RotatingFileHandler(cfg.LOG_FILE, encoding="UTF-8", maxBytes=100000000, backupCount=5)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     fh.setFormatter(formatter)
 
     logger.addHandler(fh)
-    logger.info('TRANSFER-LOGGER started\n---------------------------------')
+    logger.info('TRANSFER-LOGGER started')
     return logger
 
 

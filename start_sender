@@ -1,12 +1,9 @@
-VIRTUAL_ENV=/home/autodrom/PDDInformationTransfer
-#python3.10 -m venv venv
+export LD_LIBRARY_PATH=/home/doc/instantclient_21_8
+VIRTUAL_ENV=/home/doc/OraclePostgreTransfer
+cd $VIRTUAL_ENV
+#python -m venv venv
 . $VIRTUAL_ENV/venv/bin/activate
-#pip3.10 install --upgrade pip
-#pip3.10 install flask
-#pip3.10 install requests
-#pip3.10 install psycopg2-binary
-#pip3.10 install xmltodict
-#pip3.10 install psutil
-#pip3.10 install gunicorn
-python3.10 /home/autodrom/PDDInformationTransfer/main_transfer.py
-#gunicorn
+#pip install --upgrade pip
+#pip install psycopg2-binary
+#pip install cx_Oracle
+python /home/doc/OraclePostgreTransfer/main_transfer.py

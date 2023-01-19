@@ -24,7 +24,7 @@ ora_config = config['oracle']
 
 debug_level = ora_config['debug_level']
 
-lib_dir = ora_config['lib_dir']
+db_lib_dir = ora_config['lib_dir']
 db_dsn = ora_config['dsn']
 db_user = ora_config['db_user']
 db_password = ora_config['db_password']
@@ -36,10 +36,10 @@ db_timeout = ora_config['db_timeout']
 db_wait_timeout = ora_config['db_wait_timeout']
 db_encoding = ora_config['db_encoding']
 
-log.info(f'LIB_DIR: {lib_dir}')
+log.info(f'LIB_DIR: {db_lib_dir}')
 
-#cx_Oracle.init_oracle_client(lib_dir=lib_dir)
-cx_Oracle.init_oracle_client(lib_dir='C:\instantclient_21_3')
+#cx_Oracle.init_oracle_client(lib_dir=db_lib_dir)
+cx_Oracle.init_oracle_client(lib_dir='/home/doc/instantclient_21_8')
 ora_pool = cx_Oracle.SessionPool(db_user, db_password, db_dsn,
                                 timeout=int(db_timeout), wait_timeout=int(db_wait_timeout),
                                 max_lifetime_session=int(db_max_lifetime_session),

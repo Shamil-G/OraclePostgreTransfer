@@ -1,5 +1,5 @@
 from db.ps_conneсt import select, set_delivered
-from db.ora_conneсt import get_connection, plsql_execute, plsql_proc, debug_level
+from db.ora_connect import get_connection, plsql_execute, plsql_proc, debug_level
 from util.logger import log
 
 
@@ -84,7 +84,8 @@ def get_and_put():
                         cnt = cnt + 1
                     else:
                         break
-    log.info(f'\nЗагружено {cnt} записей\n')
+    log.info(f'Загружено {cnt} записей')
+    log.info(f'-----------------------')
 
 
 def send_all():
