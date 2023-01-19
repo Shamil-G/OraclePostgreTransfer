@@ -1,0 +1,16 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/db/__pycache__
+/model/__pycache__
+/util/__pycache__
+/view/__pycache__
+/__pycache__
+/venv
+*.log*
+*.gz
+/KT/DICOM/PA000000/ST000000
+/KT
+pdd_sender_parameter.py

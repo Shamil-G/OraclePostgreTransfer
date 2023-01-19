@@ -1,0 +1,5 @@
+#systemctl get-default
+#systemctl daemon-reload
+systemctl enable /home/doc/OraclePostgreTransfer/service/doc.service
+systemctl start doc
+systemctl status -l doc

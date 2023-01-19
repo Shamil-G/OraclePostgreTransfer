@@ -1,0 +1,13 @@
+[Unit]
+Description=Integration
+After=network.target
+
+[Service]
+Type=simple
+User=doc
+WorkingDirectory=/home/doc/OraclePostgreTransfer
+Environment="PATH=/home/doc/OraclePostgreTransfer/venv/bin" "LD_LIBRARY_PATH=/home/doc/instantclient_21_8"
+ExecStart=start_sender
+
+[Install]
+WantedBy=multi-user.target

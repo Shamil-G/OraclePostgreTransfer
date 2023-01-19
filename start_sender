@@ -1,0 +1,12 @@
+VIRTUAL_ENV=/home/autodrom/PDDInformationTransfer
+#python3.10 -m venv venv
+. $VIRTUAL_ENV/venv/bin/activate
+#pip3.10 install --upgrade pip
+#pip3.10 install flask
+#pip3.10 install requests
+#pip3.10 install psycopg2-binary
+#pip3.10 install xmltodict
+#pip3.10 install psutil
+#pip3.10 install gunicorn
+python3.10 /home/autodrom/PDDInformationTransfer/main_transfer.py
+#gunicorn
