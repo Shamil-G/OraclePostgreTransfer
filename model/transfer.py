@@ -16,7 +16,9 @@ where delivery=false
 
 def stmt_set_delivery(GFSS_IN_NOM):
     return f"""
-        update oracle.gfss_journal set delivery=true where gfss_in_nom='{GFSS_IN_NOM}'
+        update oracle.gfss_journal set delivery=true,
+	    date_delivery=current_timestamp 
+        where gfss_in_nom='{GFSS_IN_NOM}'
     """
 
 
